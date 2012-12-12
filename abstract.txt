@@ -1,0 +1,1 @@
+Rpn-calc is a themeable stack based calculator using Reverse Polish Notation.  Secondary functions are accessed by the "Fn" button, which provides a second screen of additional functions not available on the first page.
