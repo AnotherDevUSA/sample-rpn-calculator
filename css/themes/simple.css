@@ -11,16 +11,41 @@ html, body, #calc {
 
 
 #calc {
-  background-color: rgba(180,180,255,1);
-  font-size: 250%;
+  background-color: #3B3140;
 }
 
 .display {
   background-color: lightyellow;
 }
+.result{
+  color: #D97E7E;
+}
 
 .pad {
-  background-color: rgba(180,180,255,1);
+  background-color: #3B3140;
+}
+
+.btnThemeText {
+    color: #A75734;
+}
+
+.btnMathText {
+    color: brown;
+}
+.btnClrText {
+    color: #A75734;
+}
+.btnRetText {
+    color: #a8ea29;
+}
+.btnNumText{
+    color:white;
+}
+.btnText {
+    color: #B1B3C0;
+}
+.btnFnText {
+    color: black;
 }
 
 .row {
@@ -38,7 +63,7 @@ html, body, #calc {
 }
 
 .button {
-  background-color: rgba(180,180,255,1);
+  background-color: #BFB8A3;/*rgba(180,180,255,1);*/
   border: 1px solid black;
   border-radius: 10px;
 
@@ -53,5 +78,5 @@ html, body, #calc {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
-  background-color: pink;
+  background-color: #F2B9AC;
 }

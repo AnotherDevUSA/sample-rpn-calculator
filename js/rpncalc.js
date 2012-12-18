@@ -18,14 +18,14 @@ var ROLLUP = "R&uarr;"    // Roll through stack up
 var ROLLDN = "R&darr;"  // Roll through stack down
 
 function NumButton(n) {
-  this.text = n;
+  this.text = "<span class='btnNumText btnFont'>"+n+"</span>"
   this.fcn = function () {calc.display.num(n)}
 }
 
 //Optional second arg, in case you want to format op,
 //i.e. &ndash in place of '-'
 function BinopButton(o, plain) {
-  this.text = o
+  this.text = "<span class='btnMathText btnFont'>"+o+"</span>"
   if (plain) {
     o = plain
   }
@@ -40,59 +40,62 @@ function make_layouts(pad, display, stack)
   //  [ {text:"sqrt", fcn: function () { pad.unaryOp(Math.sqrt)}},
   //  [ {text:"&radic;<span style='text-decoration:overline;'>x</span>", fcn: function () { pad.unaryOp(Math.sqrt)}},
   //  [ {text:"&radic;<span style='margin-left:-0.08em; font-size:80%; border-top:0.25ex solid;'>x</span>", fcn: function () { pad.unaryOp(Math.sqrt)}},
-  layout = [
-    [ {text:"<span style='font-size:138%;'>&radic;</span><span style='margin-left:-0.075em; border-top:0.25ex solid;'>x</span>", fcn: function () { pad.unaryOp(Math.sqrt)}},
-      {text:"y<sup>x</sup>", fcn: pad.xpnt},
-      {text:"|x|", fcn: function () { pad.unaryOp(Math.abs)}},
-      {text:"<sup>1</sup>&frasl;<sub>x</sub>", fcn: pad.nvrs},
-      {text:FN, fcn: pad.toggleLayout} ],
-
-    [ {text:"<span style='font-size:90%'>x&harr;y</span>", fcn: pad.xchng},
+ 
+  oneLayout = [
+    [ {text:"<span class='btnThemeText btnFont'>theme</span>", fcn: pad.toggleTheme},
+      {text:"<span class='btnFnText btnFont'>R&uarr;</span>", fcn:function () {stack.rollup(display)}},
+      {text:"<span class='btnFnText btnFont'>R&darr;</span>", fcn:function () {stack.rolldown(display)}},
+      {text:"<span class='btnFnText btnFont'>e</span>", fcn:function () {pad.pushConst(Math.E)}},
+      {text:"<span class='btnFnText btnFont'>ln</span>", fcn:function () { pad.unaryOp(Math.log)}}
+    ],
+    [ {text:"<span class='btnFnText btnFont'>Sin<sup>-1</sup></span>", fcn:function () { pad.unaryOp(Math.asin)}},
+      {text:"<span class='btnFnText btnFont'>Cos<sup>-1</sup></span>", fcn:function () { pad.unaryOp(Math.acos)}},
+      {text:"<span class='btnFnText btnFont'>Tan<sup>-1</sup></span>", fcn:function () { pad.unaryOp(Math.atan)}},
+      {text:"<span class='btnFnText btnFont'>Round</span>", fcn:function () { pad.unaryOp(Math.round)}},
+      {text:"<span class='btnFnText btnFont'>&pi;</span>", fcn:function () {pad.pushConst(Math.PI)}}
+    ],
+    [ {text:"<span class='btnFnText btnFont'>Sin</span>", fcn:function () { pad.unaryOp(Math.sin)}},
+      {text:"<span class='btnFnText btnFont'>Cos</span>", fcn:function () { pad.unaryOp(Math.cos)}},
+      {text:"<span class='btnFnText btnFont'>Tan</span>", fcn:function () { pad.unaryOp(Math.tan)}},
+      {text:"<span class='btnFnText btnFont'>Ceil</span>", fcn:function () { pad.unaryOp(Math.ceil)}},
+      {text:"<span class='btnFnText btnFont'>Floor</span>", fcn:function () { pad.unaryOp(Math.floor)}}
+    ],
+    [ {text:"<span class='btnFnText btnFont'><span style='font-size:138%;'>&radic;</span><span style='margin-left:-0.075em; border-top:0.25ex solid;'>x</span></span>", fcn: function () { pad.unaryOp(Math.sqrt)}},
+      {text:"<span class='btnFnText btnFont'>x&harr;y</span>", fcn: pad.xchng},
+      {text:"<span class='btnFnText btnFont'>y<sup>x</sup></span>", fcn: pad.xpnt},
+      {text:"<span class='btnFnText btnFont'>|x|</span>", fcn: function () { pad.unaryOp(Math.abs)}},
+      {text:"<span class='btnFnText btnFont'><sup>1</sup>&frasl;<sub>x</sub></span>", fcn: pad.nvrs}
+    ],
+    [ {text:"<span class='btnMathText btnFont'>%</span>", fcn: pad.percent},
       new NumButton("7"),
       new NumButton("8"),
       new NumButton("9"),
-      new BinopButton("+") ],
+      new BinopButton("+") 
+    ],
 
-    [ {text:"&larr;", fcn: display.bspace},
+    [ {text:"<span class='btnMathText btnFont'>+/&ndash;</span>", fcn: display.chs},
       new NumButton("4"),
       new NumButton("5"),
       new NumButton("6"),
-      new BinopButton("&ndash;", "-") ],
+      new BinopButton("&ndash;", "-") 
+    ],
 
-    [ {text:"C<span style='font-size: 85%'>lr</span>", fcn: display.clear},
+    [ {text:"<span class='btnRetText btnFont'>&crarr;</span>", fcn: pad.enterButton} /*&crarr;*/,
       new NumButton("1"),
       new NumButton("2"),
       new NumButton("3"),
-      new BinopButton("*", "*") ],
-      // Unfortunately Android doesn't seem to know &times; or &#215;
+      new BinopButton("*", "*")
+    ],
 
-    [ {text:"<span style='font-size:110%'>&crarr;<span>", fcn: pad.enterButton},
+    [ {text:"<span class='btnClrText btnFont'>Clr</span>", fcn: display.clear},
+      {text:"<span class='btnClrText btnFont'>&larr;</span>", fcn: display.bspace},
       new NumButton("0"),
       new NumButton("."),
-      {text:"+/&ndash;", fcn: display.chs},
-      new BinopButton("&divide;", "/") ],
+      new BinopButton("&divide;", "/")      
+    ],
   ];
-
-  Fnlayout = [
-    [ {text:"<span style='font-size:50%'>Theme</span>", fcn: pad.toggleTheme},
-      {text:ROLLUP, fcn:function () {stack.rollup(display)}},
-      {text:ROLLDN, fcn:function () {stack.rolldown(display)}},
-      {text:FN, fcn: pad.toggleLayout} ],
-    [ {text:"ln", fcn:function () { pad.unaryOp(Math.log)}},
-      {text:"e", fcn:function () {pad.pushConst(Math.E)}},
-      {text:"&pi;", fcn:function () {pad.pushConst(Math.PI)}},
-      {text:"<span style='font-size:60%'>round</span>", fcn:function () { pad.unaryOp(Math.round)}} ],
-    [ {text:"sin", fcn:function () { pad.unaryOp(Math.sin)}},
-      {text:"cos", fcn:function () { pad.unaryOp(Math.cos)}},
-      {text:"tan", fcn:function () { pad.unaryOp(Math.tan)}},
-      {text:"<span style='font-size:60%'>floor", fcn:function () { pad.unaryOp(Math.floor)}} ],
-    [ {text:"<span style='font-size:80%'>sin<sup>-1</sup></span>", fcn:function () { pad.unaryOp(Math.asin)}},
-      {text:"<span style='font-size:80%'>cos<sup>-1</sup></span>", fcn:function () { pad.unaryOp(Math.acos)}},
-      {text:"<span style='font-size:80%'>tan<sup>-1</sup></span>", fcn:function () { pad.unaryOp(Math.atan)}},
-      {text:"<span style='font-size:60%'>ceil</span>", fcn:function () { pad.unaryOp(Math.ceil)}} ]
-  ];
-
-  return [layout, Fnlayout];
+  return [oneLayout];
+  //return [layout, Fnlayout];
 }
 
 
@@ -209,6 +212,12 @@ function KeyPad(calc, display, stack) {
       display.setcurrentnum(y);
   }
 
+  this.percent = function () {
+      var x = display.currentnum()/100;
+      // stack.pushnum(x);
+      display.setcurrentnum(x);
+  }
+  
   this.xpnt = function () {
     var x = display.currentnum();
     var y = stack.popnum();
@@ -277,8 +286,15 @@ function Stack (zero, sz) {
 
 function Display(z) {
   this.zero = z
-  this.dom = document.createElement('div');
-  this.dom.setAttribute('class','display');
+  var displayDiv = document.createElement('div');
+  var resultDiv = document.createElement('div');
+  displayDiv.setAttribute('class','display');
+  resultDiv.setAttribute('class','result');
+  displayDiv.appendChild(resultDiv);
+
+  this.disp_dom = displayDiv;
+  this.dom = resultDiv;
+
   var self = this;
 
   this.currentnum = function ()
@@ -353,10 +369,11 @@ function Display(z) {
 function Calc(x) {
   this.dom = x;
   this.stack = new Stack(CLEAR, STACKSIZE);
+  
   this.display = new Display(CLEAR);
   this.keypad = new KeyPad(this, this.display, this.stack);
 
-  this.dom.appendChild(this.display.dom);
+  this.dom.appendChild(this.display.disp_dom);
   this.dom.appendChild(this.keypad.dom);
 
   var l = document.getElementsByClassName('theme');
