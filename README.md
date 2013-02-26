@@ -2,11 +2,18 @@ RPN Calc
 =====
 RPN Calc is a themeable stack based calculator using Reverse Polish Notation.
 
-Author: Dale Schouten <dale.a.schouten@intel.com>
+Intel(R) HTML5 Development Environment Beta
+-------------------------------------------
+This sample is part of the Intel(R) HTML5 Development Environment tool. 
+Please sign up the beta at http://software.intel.com/en-us/html5.
+To see the technical detail of the sample, please visit the sample article page 
+at http://software.intel.com/en-us/articles/rpn-calculator. 
 
 Important App Files
 ---------------------------
 * index.html
+* icon.png
+* screenshot.png
 * css/rpncalc.css
 * css/themes/bubble.css
 * css/themes/green.css
@@ -15,6 +22,8 @@ Important App Files
 * css/themes/shinyredbutton.png
 * css/themes/simple.css
 * css/themes/static-bubble.css
+* win8-images/*.png
+* win8-proj/*.jsproj,*.pfx,*.appxmanifest
 * js/rpncalc.js
 
 
