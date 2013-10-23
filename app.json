@@ -4,6 +4,8 @@
 	"tooltip":"Reverse Polish Notation Calculator",
 	"description":"A Themable Stack based calculator using reverse polish notation, akin to the HP calculators that were popular with engineers and scientists in the 1980s. Several different themes are included, with different color schemes, styles and button animations.",
 	"highlights":["Themeable","Utility"],
+	"apppreview":"true",
+	"appname":"demo.rpn-calculator",
 	"articleUrl":"http://software.intel.com/en-us/articles/rpn-calculator",
 	"keywords":["Themeable","Utility"],
 	"iconUrl":"https://github.com/gomobile/sample-rpn-calculator/blob/master/icon.png",
