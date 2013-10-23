@@ -11,6 +11,7 @@
 	"iconUrl":"https://github.com/gomobile/sample-rpn-calculator/blob/master/icon.png",
 	"screenshotUrl":"https://github.com/gomobile/sample-rpn-calculator/blob/master/screenshot.png",
 	"visible" : "true",
-	"zipUrl":""
+	"zipUrl":"",
+	"relname":"4.0.0"
 }
 
