@@ -1,11 +1,11 @@
-RPN Calc
-=====
-RPN Calc is a themeable stack based calculator using Reverse Polish Notation.
+RPN Calculator
+--------------
+RPN Calculator is a themeable stack based calculator using Reverse Polish Notation.
 
-Intel(R) HTML5 Development Environment Beta
+Intel(R) XDK
 -------------------------------------------
-This sample is part of the Intel(R) HTML5 Development Environment tool. 
-Please sign up the beta at http://software.intel.com/en-us/html5.
+This sample is part of the Intel(R) XDK tool. 
+Please sign up at http://software.intel.com/en-us/html5.
 To see the technical detail of the sample, please visit the sample article page 
 at http://software.intel.com/en-us/articles/rpn-calculator. 
 
