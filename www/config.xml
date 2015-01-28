@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.intel.rpn-calc"
+        id        = "com.intel.flood"
         versionCode="1" 
         version   = "0.0.1">
 
@@ -9,12 +9,12 @@
     <!-- section on this page http://developer.android.com/tools/publishing/versioning.html -->
     <!-- for more information regarding the use and purpose of the versionCode attribute -->
 
-    <name>RPN-Calc</name>
+    <name>Flood</name>
     <content src="index.html"/>
     <icon src="icon.png"/>
 
     <description>
-        RPN calculator with multiple screens and themes.
+        Flood game.
     </description>
 
     <author href="http://software.intel.com/html5">

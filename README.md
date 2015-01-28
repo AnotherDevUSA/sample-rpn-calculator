@@ -1,31 +1,22 @@
-RPN Calculator
---------------
-RPN Calculator is a themeable stack based calculator using Reverse Polish Notation.
+Flood
+=====
+Flood is a puzzle game implemented with HTML5/CSS3/Javascript technology. 
 
 Intel(R) XDK
 -------------------------------------------
-This sample is part of the Intel(R) XDK tool. 
-Please sign up at http://software.intel.com/en-us/html5.
-To see the technical detail of the sample, please visit the sample article page 
-at http://software.intel.com/en-us/articles/rpn-calculator. 
+This sample is part of the Intel(R) XDK tool. Download the Intel(R) XDK at 
+http://software.intel.com/en-us/html5. To see the technical detail of the sample, 
+please visit the sample article page at http://software.intel.com/en-us/articles/flood-puzzle-game. 
 
 Important App Files
 ---------------------------
 * index.html
+* abstract.txt
+* app.json
+* config.xml
 * icon.png
+* README.md
 * screenshot.png
-* css/rpncalc.css
-* css/themes/bubble.css
-* css/themes/green.css
-* css/themes/mobile.css
-* css/themes/shinybuttons.css
-* css/themes/shinyredbutton.png
-* css/themes/simple.css
-* css/themes/static-bubble.css
-* win8-images/*.png
-* win8-proj/*.jsproj,*.pfx,*.appxmanifest
-* js/rpncalc.js
-
 
 License Information Follows
 ---------------------------
@@ -55,12 +46,4 @@ GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
 HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT 
 LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT 
 OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-
-IMAGES
------------------------------------------------------------------------------
-
-all images are created by Intel Corp. 
-they are licensed under the Creative Commons Attribution 3.0 license 
-http://creativecommons.org/licenses/by/3.0/us/
 
