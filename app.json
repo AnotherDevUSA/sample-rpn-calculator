@@ -13,6 +13,7 @@
 	"screenshotUrl":"https://github.com/gomobile/sample-rpn-calculator/blob/master/screenshot.png",
 	"visible" : "true",
 	"zipUrl":"",
-	"relname":"4.0.0"
+	"relname":"4.0.0",
+  	"projectTypeName": "com.intel.xdk.projecttype.webapp"
 }
 
