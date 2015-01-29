@@ -5,11 +5,11 @@
       "type": "Demo",
       "createDefaultBuildConfigs": true,
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
-      "src": "https://edge-intel.s3.amazonaws.com/samples/production/sample-flood-puzzle/sample.zip",
+      "src": "https://edge-intel.s3.amazonaws.com/samples/production/sample-rpn-calculator/sample.zip",
       "sourceDirectory": "www",
-      "projectGuid": "a9ebf6e9-f2db-46ea-bf57-0dda372344ca",
-      "lastModifiedDate": 1407893400654,
-      "creationDate": 1407892397760
+      "projectGuid": "f583a32a-efd3-419f-ab3e-30d4deda65d4",
+      "lastModifiedDate": 1407989476904,
+      "creationDate": 1407988805862
     },
     "sourceDirectory": "www",
     "cordovaPluginsDirectory": "plugins",
@@ -34,15 +34,15 @@
     ],
     "cordovaPlugins": [
       {
-        "id": "org.apache.cordova.device",
-        "version": "0.2.9",
+        "id": "org.apache.cordova.splashscreen",
+        "version": "0.3.0",
         "selectedState": "Included",
         "data": {},
         "paramvals": {}
       },
       {
-        "id": "org.apache.cordova.splashscreen",
-        "version": "0.3.0",
+        "id": "org.apache.cordova.device",
+        "version": "0.2.9",
         "selectedState": "Included",
         "data": {},
         "paramvals": {}
@@ -58,8 +58,8 @@
           "android-targetedSdkVersion": "19"
         },
         "isActive_": true,
-        "appName_": "FloodPuzzle",
-        "appID_": "xdk.sample.floodpuzzle",
+        "appName_": "RPNCalculator",
+        "appID_": "xdk.sample.rpncalculator",
         "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
@@ -70,7 +70,7 @@
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.1",
         "runtime_": "Cordova 3.x",
-        "appDescription_": "A flood game, similar to Color Flood or Flood-it, where the goal is to fill the field with a single color using the minimum number of color transitions.",
+        "appDescription_": "A Themable Stack based calculator using reverse polish notation, akin to the HP calculators that were popular with engineers and scientists in the 1980s. Several different themes are included, with different color schemes, styles and button animations.",
         "appVersionCode_": "1"
       },
       "Android-Crosswalk": {
@@ -81,8 +81,8 @@
           "android-targetedSdkVersion": "19"
         },
         "isActive_": true,
-        "appName_": "FloodPuzzle",
-        "appID_": "xdk.sample.floodpuzzle",
+        "appName_": "RPNCalculator",
+        "appID_": "xdk.sample.rpncalculator",
         "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
@@ -93,7 +93,7 @@
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.1",
         "runtime_": "Crosswalk with Cordova 3.x",
-        "appDescription_": "A flood game, similar to Color Flood or Flood-it, where the goal is to fill the field with a single color using the minimum number of color transitions.",
+        "appDescription_": "A Themable Stack based calculator using reverse polish notation, akin to the HP calculators that were popular with engineers and scientists in the 1980s. Several different themes are included, with different color schemes, styles and button animations.",
         "appVersionCode_": "1"
       },
       "iOS": {
@@ -103,8 +103,8 @@
           "ios-target": "5"
         },
         "isActive_": true,
-        "appName_": "FloodPuzzle",
-        "appID_": "xdk.sample.floodpuzzle",
+        "appName_": "RPNCalculator",
+        "appID_": "xdk.sample.rpncalculator",
         "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
@@ -115,15 +115,15 @@
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.1",
         "runtime_": "Cordova 3.x",
-        "appDescription_": "A flood game, similar to Color Flood or Flood-it, where the goal is to fill the field with a single color using the minimum number of color transitions."
+        "appDescription_": "A Themable Stack based calculator using reverse polish notation, akin to the HP calculators that were popular with engineers and scientists in the 1980s. Several different themes are included, with different color schemes, styles and button animations."
       },
       "Windows8": {
         "platform_": "windows8",
         "name_": "Windows8",
         "preferences_": {},
         "isActive_": true,
-        "appName_": "FloodPuzzle",
-        "appID_": "xdk.sample.floodpuzzle",
+        "appName_": "RPNCalculator",
+        "appID_": "xdk.sample.rpncalculator",
         "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
@@ -134,14 +134,14 @@
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.0.1",
         "runtime_": "Cordova 3.x",
-        "appDescription_": "A flood game, similar to Color Flood or Flood-it, where the goal is to fill the field with a single color using the minimum number of color transitions."
+        "appDescription_": "A Themable Stack based calculator using reverse polish notation, akin to the HP calculators that were popular with engineers and scientists in the 1980s. Several different themes are included, with different color schemes, styles and button animations."
       },
       "WindowsPhone8": {
         "platform_": "wp8",
         "name_": "WindowsPhone8",
         "preferences_": {},
         "isActive_": true,
-        "appName_": "FloodPuzzle",
+        "appName_": "RPNCalculator",
         "appID_": "not.yet.specified",
         "appAccess_": "*",
         "icons_": [],
