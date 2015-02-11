@@ -1,5 +1,5 @@
 {
-	"reponame":"sample-rpn-calculator",
+	"repoName":"sample-rpn-calculator",
 	"title":"RPN Calculator",
 	"abbr":"RPNCalculator",
 	"tooltip":"Reverse Polish Notation Calculator",
